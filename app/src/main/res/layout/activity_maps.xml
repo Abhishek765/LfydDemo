@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+   <LinearLayout
+       android:id="@+id/LinearLayout1"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="horizontal">
+       <EditText
+           android:id="@+id/TF_location"
+           android:layout_width="290dp"
+           android:layout_height="45dp"
+           android:ems="10"
+           android:inputType="textPersonName"
+           android:hint="Enter the city name"
+           android:layout_alignParentTop="true"
+           android:layout_alignParentStart="true" />
+
+       <Button
+           android:id="@+id/B_search"
+           android:layout_width="100dp"
+           android:layout_height="45dp"
+           android:layout_alignParentTop="true"
+           android:layout_toEndOf="@+id/TF_location"
+           android:onClick="onClick"
+           android:text="Search" />
+   </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/LinearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/LinearLayout1"
+        android:layout_margin="5dp"
+        >
+
+        <Button
+            android:id="@+id/B_hospital"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onClick"
+            android:text="Hospitals" />
+
+        <Button
+            android:id="@+id/B_restaurant"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onClick"
+            android:text="Restaurants" />
+
+        <Button
+            android:id="@+id/B_schools"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onClick"
+            android:text="Schools" />
+
+
+    </LinearLayout>
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/LinearLayout2"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="-1dp"
+        tools:context=".MapsActivity" />
+    <!--
+     android:layout_below="@+id/B_hopistals"-->
+
+
+</RelativeLayout>
