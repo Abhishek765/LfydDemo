@@ -89,6 +89,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         GetNearbyPlacesData getNearbyPlacesData = new GetNearbyPlacesData();
         switch (view.getId()) {
             case R.id.B_search: {
+                mMap.clear();
                 EditText tf_location = findViewById(R.id.TF_location);
                 String location = tf_location.getText().toString();
                 List<Address> addressList = null;
